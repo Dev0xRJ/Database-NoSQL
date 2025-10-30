@@ -1,0 +1,24 @@
+{
+  "name": "banco-de-dados-nosql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "json": "node cliente.js",
+    "mongo": "node crudeCreate.js",
+    "update": "node crudUpdate.js",
+    "index": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Sistema NoSQL - Execute: npm start\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atlas": "^1.0.0-alpha.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^7.8.7",
+    "node": "^22.21.0"
+  },
+  "description": ""
+}
