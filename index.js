@@ -1,8 +1,8 @@
+// Sistema de Gerenciamento de Clientes - NoSQL
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-// Importa??es dos m?dulos especializados
 const { 
     conectarBanco: conectarMongoDB,
     adicionarCliente: adicionarClienteMongoDB,
@@ -14,11 +14,9 @@ const {
 
 const { validarCPF } = require('./cliente.js');
 
-// Configuracoes
 const DB_FILE = path.join(__dirname, 'dados', 'clientes.json');
 const MONGODB_URI = 'mongodb://localhost:27017/sistemaclientescompass';
 
-// Interface de linha de comando
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -30,10 +28,8 @@ function perguntar(pergunta) {
     });
 }
 
-// FUNCOES JSON (Sistema Local)
 /**
- * Carrega clientes do arquivo JSON
- * @returns {Array<Object>} Lista de clientes
+ * @returns {Array<Object>} 
  */
 function carregarClientes() {
     try {
@@ -46,8 +42,7 @@ function carregarClientes() {
 }
 
 /**
- * Salva clientes no arquivo JSON
- * @param {Array<Object>} clientes Lista de clientes
+ * @param {Array<Object>} clientes 
  */
 function salvarClientes(clientes) {
     try {
@@ -64,11 +59,10 @@ function salvarClientes(clientes) {
 }
 
 /**
- * Adiciona cliente no sistema JSON
- * @param {string} nome Nome do cliente
- * @param {string} cpf CPF do cliente
- * @param {string} email Email do cliente
- * @param {string} telefone Telefone do cliente
+ * @param {string} nome 
+ * @param {string} cpf
+ * @param {string} email
+ * @param {string} telefone 
  */
 function adicionarClienteJSON(nome, cpf, email = '', telefone = '') {
     if (!validarCPF(cpf)) {
@@ -100,7 +94,6 @@ function adicionarClienteJSON(nome, cpf, email = '', telefone = '') {
 }
 
 /**
- * Lista clientes do sistema JSON
  */
 function listarClientesJSON() {
     const clientes = carregarClientes();
@@ -121,7 +114,6 @@ function listarClientesJSON() {
     });
 }
 
-// MENU PRINCIPAL
 async function mostrarMenuPrincipal() {
     console.clear();
     console.log('======= SISTEMA INTEGRADO DE CLIENTES =======');
@@ -302,15 +294,12 @@ async function executarSistema() {
     }
 }
 
-// EXPORTACOES E EXECUCAO
 module.exports = {
-    // JSON System
     carregarClientes,
     salvarClientes,
     adicionarClienteJSON,
     listarClientesJSON,
     
-    // MongoDB Integration
     conectarMongoDB,
     adicionarClienteMongoDB,
     listarClientesMongoDB,
@@ -318,12 +307,10 @@ module.exports = {
     atualizarClienteMongoDB,
     removerClienteMongoDB,
     
-    // Utils
     validarCPF,
     executarSistema
 };
 
-// Execucao principal se chamado diretamente
 if (require.main === module) {
     executarSistema().catch(console.error);
 }
