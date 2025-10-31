@@ -1,48 +1,48 @@
-# ??? Sistema de Banco de Dados NoSQL
+# Sistema de Banco de Dados NoSQL
 
 Sistema completo de gerenciamento de clientes usando MongoDB e JSON, desenvolvido em Node.js.
 
-## ?? Funcionalidades
+## Funcionalidades
 
-### ?? **M?ltiplos Sistemas Integrados**
+### **Múltiplos Sistemas Integrados**
 - **Sistema JSON** - Armazenamento em arquivos locais
 - **Sistema MongoDB** - Banco de dados NoSQL
 - **Sistema Integrado** - Menu unificado JSON + MongoDB
-- **Sistema de Updates** - Especializado em atualiza??es
+- **Sistema de Updates** - Especializado em atualizaçoes
 
-### ?? **Campos do Cliente**
-- Nome (obrigat?rio)
-- Email (obrigat?rio, ?nico)
-- CPF (obrigat?rio, ?nico, formato validado)
-- Data de Nascimento (obrigat?rio)
-- Data de Cadastro (autom?tica)
+### **Campos do Cliente**
+- Nome (obrigatório)
+- Email (obrigatório, ínico)
+- CPF (obrigatório, ínico, formato validado)
+- Data de Nascimento (obrigatório)
+- Data de Cadastro (automática)
 
-### ? **Opera??es CRUD Completas**
-- ? **CREATE** - Adicionar clientes
-- ? **READ** - Listar e buscar clientes
-- ? **UPDATE** - Atualizar dados dos clientes
-- ? **DELETE** - Remover clientes
+### **Operaçoes CRUD Completas**
+-  **CREATE** - Adicionar clientes
+-  **READ** - Listar e buscar clientes
+-  **UPDATE** - Atualizar dados dos clientes
+-  **DELETE** - Remover clientes
 
-## ?? Instala??o e Execu??o
+##  Instalação e Execução
 
-### **Pr?-requisitos**
+### **Pré-requisitos**
 - Node.js (v14+)
 - MongoDB (local ou remoto)
 - NPM ou Yarn
 
-### **Instala??o**
+### **Instalação**
 ```bash
-# Clone o reposit?rio
+# Clone o repositório
 git clone https://github.com/Dev0xRJ/Database-NoSQL.git
 
-# Entre no diret?rio
+# Entre no diretório
 cd Database-NoSQL
 
-# Instale as depend?ncias
+# Instale as dependências
 npm install
 ```
 
-### **Execu??o**
+### **Execução**
 ```bash
 # Sistema Integrado (Menu Principal)
 npm start
@@ -57,20 +57,20 @@ npm run json
 npm run update
 ```
 
-## ?? Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
-??? index.js           # Sistema integrado principal
-??? cliente.js         # Sistema JSON completo
-??? crudeCreate.js     # Sistema MongoDB b?sico
-??? crudUpdate.js      # Sistema especializado em updates
-??? package.json       # Configura??es e depend?ncias
-??? dados/
-?   ??? clientes.json  # Armazenamento JSON
-??? README.md          # Documenta??o
+index.js           # Sistema integrado principal
+cliente.js         # Sistema JSON completo
+crudeCreate.js     # Sistema MongoDB básico
+crudUpdate.js      # Sistema especializado em updates
+package.json       # Configurações e dependências
+dados/
+clientes.json  # Armazenamento JSON
+README.md          # Documentação
 ```
 
-## ??? Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Node.js** - Runtime JavaScript
 - **MongoDB** - Banco de dados NoSQL
@@ -78,7 +78,7 @@ npm run update
 - **Readline** - Interface de linha de comando
 - **JSON** - Armazenamento de dados local
 
-## ?? Exemplos de Uso
+## Exemplos de Uso
 
 ### **Sistema MongoDB**
 ```bash
@@ -99,35 +99,35 @@ npm start
 # Escolha entre JSON ou MongoDB
 ```
 
-## ?? Valida??es Implementadas
+## Validações Implementadas
 
-- ? **CPF** - Formato XXX.XXX.XXX-XX e algoritmo oficial
-- ? **Email** - Formato v?lido e unicidade
-- ? **Data** - Formato YYYY-MM-DD
-- ? **Campos obrigat?rios** - Valida??o completa
+-  **CPF** - Formato XXX.XXX.XXX-XX e algoritmo oficial
+-  **Email** - Formato válido e unicidade
+-  **Data** - Formato YYYY-MM-DD
+-  **Campos obrigatórios** - Validação completa
 
-## ?? Configura??o do MongoDB
+## Configuração do MongoDB
 
 O sistema conecta automaticamente em:
 ```
 mongodb://localhost:27017/meubanco
 ```
 
-Para usar um MongoDB diferente, edite a conex?o em `crudeCreate.js`.
+Para usar um MongoDB diferente, edite a conexção em `crudeCreate.js`.
 
-## ?? Contribui??o
+## Contribuição
 
-1. Fa?a um fork do projeto
+1. Faça um fork do projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudan?as (`git commit -m 'Add some AmazingFeature'`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## ?? Licen?a
+## Licença
 
-Este projeto est? sob a licen?a ISC.
+Este projeto está sob a licença ISC.
 
-## ????? Autor
+## Autor
 
 **Dev0xRJ**
 - GitHub: [@Dev0xRJ](https://github.com/Dev0xRJ)
